@@ -83,13 +83,13 @@ editusernameDetails(x:any){
 console.log(x)
 const modalRef = this.modalService.open(EdituserComponent);
 modalRef.componentInstance.user = x;
-}
-// edituseremailDetails(x:any){
-//   console.log(x)
-//   const modalRef = this.modalService.open(EdituserComponent);
-//   modalRef.componentInstance.user = x;
+modalRef.componentInstance.passEntry.subscribe((receivedEntry:any) => {
+  console.log(receivedEntry)
+this.userDetails.name = receivedEntry[0].name
+this.userDetails.email = receivedEntry[0].email
 
-// }
+})
+}
 
 
 

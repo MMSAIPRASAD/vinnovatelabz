@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup,FormBuilder,FormControl,Validator } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
@@ -13,6 +13,7 @@ export class EdituserComponent {
 
   userLoginForm!:FormGroup;
   @Input() public user: any;
+  @Output() passEntry: EventEmitter<any> = new EventEmitter();
 
 
   constructor(private _fb:FormBuilder,private modalService:NgbModal,private _http:HttpClient,public activeModal: NgbActiveModal){
@@ -37,6 +38,8 @@ let details = [{
 let url = 'http://localhost:3000/postDetails'
 this._http.post(url,JSON.stringify(details)).subscribe((resp:any)=>{
   console.log(resp)
+  this.passEntry.emit(details);
+
   this.activeModal.close()
 
 })
