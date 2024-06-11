@@ -1,5 +1,21 @@
 # VinnovatelabzTask
 
+
+## Project Description :
+This application is used to track expenses where user can login and check the expenses list.
+
+## Functionalities:
+1.Add new expense,Edit and delete expenses 
+2.Display and Edit user information
+3.currency converter
+
+## used json server to create api and to perform CRUD operatins
+
+## How to run the code :
+1.use git clone to download the github repository.
+2.go to project folder and run npm install command.
+3.use npm start to run the project in your local.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
 ## Development server
