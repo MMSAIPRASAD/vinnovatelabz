@@ -1,0 +1,95 @@
+{
+  "expenseDetails": [
+    {
+      "id": 1,
+      "expenseName": "electricity",
+      "expenseTotal": 2000,
+      "expenseTarget": 6000,
+      "image": "assets/images/download (1).jfif",
+      "percentage": 10,
+      "color": "success"
+    },
+    {
+      "id": 1,
+      "expenseName": "shopping",
+      "expenseTotal": 1000,
+      "expenseTarget": 6000,
+      "image": "assets/images/download (2).jfif",
+      "percentage": 70,
+      "color": "danger"
+    },
+    {
+      "id": 1,
+      "expenseName": "groceries",
+      "expenseTotal": 4000,
+      "expenseTarget": 8000,
+      "image": "assets/images/download.jfif",
+      "percentage": 90,
+      "color": "info"
+    },
+    {
+      "id": 1,
+      "expenseName": "travel",
+      "expenseTotal": 3000,
+      "expenseTarget": 6000,
+      "image": "assets/images/download (3).jfif",
+      "percentage": 10,
+      "color": "warning"
+    },
+    {
+      "id": 1,
+      "expenseName": "medical bills",
+      "expenseTotal": 2000,
+      "expenseTarget": 10000,
+      "image": "assets/images/images.png",
+      "percentage": 10,
+      "color": "success"
+    },
+    {
+      "id": 1,
+      "expenseName": "food",
+      "expenseTotal": 4000,
+      "expenseTarget": 4000,
+      "image": "assets/images/images.jfif",
+      "percentage": 10,
+      "color": "warning"
+    },
+    {
+      "id": 1,
+      "expenseName": "miscellaneous",
+      "expenseTotal": 1000,
+      "expenseTarget": 6000,
+      "image": "assets/images/images (1).jfif",
+      "percentage": 10,
+      "color": "info"
+    }
+  ],
+  "postDetails": [
+    
+  ],
+  "userDetails":[
+
+  ],
+ "exchangeRates": [{
+        "GBPAED": 5.109727,
+        "GBPAFN": 107.750768,
+        "GBPALL": 141.659078,
+        "GBPAMD": 725.255305,
+        "GBPANG": 2.496633,
+        "GBPAOA": 909.923974,
+        "GBPARS": 130.481869,
+        "GBPAUD": 1.789173,
+        "GBPAWG": 2.503947,
+        "GBPAZN": 2.357994,
+        "GBPBAM": 2.253445,
+        "GBPBBD": 2.808295,
+        "GBPBDT": 117.867727,
+        "GBPBGN": 2.253678,
+        "GBPBHD": 0.524384,
+        "GBPBIF": 2747.310462,
+        "GBPBMD": 1.391082,
+        "GBPBND": 1.851765,
+        "GBPBOB": 9.589957,
+        "GBPBRL": 7.344636
+}]
+}

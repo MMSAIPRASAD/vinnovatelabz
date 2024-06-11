@@ -1,0 +1,110 @@
+<div class="container-fluid">
+    <div class="row float-end" *ngIf="userDetails">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+         <div class="col-6">
+            <a class="navbar-brand" href="#">EXPENSE TRACKER DASHBOARD</a>
+
+         </div>    
+                <div class="col-2">
+                    <img style="float:right;height:100px;width:100px" src="assets/images/download.png">
+                </div>
+                <div class="col-4">
+                    <div class="p-2 mt-2">
+                        <div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <h5>Name : </h5>
+                                </div>
+                                <div class="col-8">
+                                    <h5>{{userDetails.name}} </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <h5>Email : </h5>
+                                </div>
+                                <div class="col-8">
+                                    <h5> {{userDetails.email}} </h5>
+        
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" (click)="editusernameDetails(userDetails)">Edit</button>
+                    </div>
+                </div>
+            </div>
+          </nav>
+       
+
+        <div>
+            <button class="btn btn-primary mt-4 m-4" (click)="addExpense('')">Add Expenses</button>
+
+        </div>
+
+
+        <div class="card m-4 " style="width: 18rem;padding:0px" *ngFor="let arr of expenseDetails">
+            <img [src]="arr.image" style="height:150px" class="card-img-top image-fluid rounded" alt="...">
+
+            <div class="card-body">
+                <h5 class="card-title text-uppercase fw-bolder text-center ">{{arr.expenseName}}</h5>
+               
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-uppercase fw-bolder ">Budget :{{arr.expenseTarget}}</li>
+                    <li class="list-group-item text-uppercase fw-bolder ">Expense :{{arr.expenseTotal}}</li>
+                  </ul>
+                <ngb-progressbar class="mb-3" type="{{arr.color}}" [value]="arr.progress" [showValue]="true" />
+
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-6 cursor-pointer">
+                        <button class="btn btn-warning" (click)="addExpense(arr)">Edit</button>
+
+                    </div>
+                    <div class="col-6 cursor-pointer">
+                        <button class="btn btn-warning" (click)="deleteExpense(arr)">Delete</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="card rounded bg-light m-4 p-4">
+    <h4>Currency Converter</h4>
+
+<form [formGroup]="currencyForm">
+
+
+        <div class="row mt-5">
+            <div class="col-6 mb-3">
+                <label>From</label>
+                <select class="form-select" aria-label="Default select example" >
+                    <option *ngFor="let arr of currencyValues">{{arr.currency}}</option>
+                  </select>
+        </div>
+        <div class="col-6 mb-5">
+            <label>To</label>
+            <select class="form-select" aria-label="Default select example" >
+                <option *ngFor="let arr of currencyValues">{{arr.currency}}</option>
+              </select>
+        </div>
+
+        <div class="form-group mt-6">
+            <label>Amount to convert</label>
+            <input type="text" class="form-control" formControlName="amount"> 
+        </div>
+
+        </div>
+    <button class="btn btn-primary mt-3" (click)="convertCurrency()">Convert</button>
+</form> 
+</div>

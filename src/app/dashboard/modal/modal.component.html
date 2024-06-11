@@ -1,0 +1,38 @@
+<div>        
+    <h5 class="text-center pt-4">Add Expense</h5>
+</div>
+
+<div class="container-fluid mx-auto p-5 pt-2">
+
+  <div style="margin-left:0px;margin-right:0px">
+        
+    <form [formGroup]="modalForm">
+        <div class="form-group mb-4">
+            <label>Name</label>
+            <input type="text" class="form-control" formControlName="ename"> 
+        </div>
+    
+        <div class="form-group mb-4">
+            <label>Budget</label>
+            <input type="number" class="form-control" formControlName="ebudget"> 
+        </div>
+
+        <div class="form-group mb-4">
+            <label>Expense</label>
+            <input type="number" class="form-control" formControlName="eexp"> 
+        </div>
+    
+        <form [formGroup]="registrationForm" class="mb-4" >
+                    <div class="avatar-edit" *ngIf="addExpense">
+                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)" />
+      </div>
+  </form>
+  
+  <button class="btn btn-primary m-1" *ngIf="editExpense" (click)="createExpense(modalForm,'edit')" [disabled]="modalForm.invalid">Submit</button>
+        <button class="btn btn-primary" *ngIf="addExpense" (click)="createExpense(modalForm,'add')" [disabled]="modalForm.invalid">Submit</button>
+<button class="btn btn-danger" (click)="closeDialog()">Cancel</button>
+    </form>
+    
+    </div>
+    </div>
+    

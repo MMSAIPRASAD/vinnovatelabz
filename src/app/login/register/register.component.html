@@ -1,0 +1,35 @@
+<div class="container-fluid mx-auto p-5">
+
+    <div style="margin-left:0px;margin-right:0px">
+    
+    
+        <h1>Add Expense</h1>
+    
+    <form [formGroup]="modalForm">
+        <div class="form-group">
+            <label>User Name</label>
+            <input type="text" class="form-control" formControlName="name"> 
+        </div>
+    
+        <div class="form-group">
+            <label>Email</label>
+            <input type="password" class="form-control" formControlName="email"> 
+        </div>
+
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="text" class="form-control" formControlName="password"> 
+        </div>
+    
+        <div class="form-group">
+            <label>Mobile</label>
+            <input type="password" class="form-control" formControlName="mobile"> 
+        </div>
+    
+        <button class="btn btn-primary" (click)="registerUser(modalForm)" [disabled]="modalForm.invalid">Submit</button>
+    </form>
+    
+    </div>
+    </div>
+    
